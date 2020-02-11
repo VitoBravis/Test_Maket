@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+div, nav, header, a, img, body, h1, h2, h3, h4 ,h5 ,h6{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+a {
+  text-decoration: none;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    position: relative;
+    max-width: 1920px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    color: inherit;
+}
+.absolute-position{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/* Header
+-------------------------*/
+.header{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    transition:
+            background-color 0.3s ease,
+            color 0.3s ease;
+    color: #ffffff;
+}
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: inherit;
+}
+.header__item{
+    display: flex;
+    align-items: center;
+    color: inherit;
+}
+.header__btn{
+    width: 80px;
+    height: 80px;
+    background: #5C6266;
+    cursor: pointer;
+}
+.header__logo{
+    margin: 0 40px 0 20px;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.33;
+    color: inherit;
+}
+.nav__link{
+    color: inherit;
+    padding: calc(80px/2 - 12px/2) 20px 0;
+    height: 100%;
+    margin-left: 20px;
+    transition: border-bottom 0.1s ease;
+    text-transform: uppercase;
+}
+.nav__link:hover{
+    border-bottom: 4px solid #FFCB05;
+}
+.header__phone{
+    color: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 55px;
+}
+
+/* Intro
+-------------------------*/
+.intro{
+    height: 1079px;
+    width: 100%;
+    background: #000000 url("../images/steadidrill_topbanner 2.png") center no-repeat;
+}
+.intro__inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*padding-top: 80px;*/
+    height: 100%;
+
+}
+.intro__title{
+    font-weight: bold;
+    font-size: 96px;
+    line-height: 140%;
+}
+.intro__title span{
+    color: #FFCB05;
+}
+.intro__info{
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 204.27%;
+    margin-top: 40px;
+}
+.intro__info, .intro__title{
+    max-width: 1091px;
+    color: #ffffff;
+    margin-left: 160px;
+}
+
+/*
+-------------------------*/
+
