@@ -3,6 +3,7 @@
 }
 html{
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 div, nav, header, a, img, body, h1, h2, h3, h4 ,h5 ,h6{
     margin: 0;
@@ -12,12 +13,13 @@ div, nav, header, a, img, body, h1, h2, h3, h4 ,h5 ,h6{
     background: transparent;
 }
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 body{
     font-family: 'Open Sans', sans-serif;
 }
 
+/*Скорее всего не нужен*/
 .container{
     position: relative;
     max-width: 1920px;
@@ -25,12 +27,6 @@ body{
     height: 100%;
     margin: 0 auto;
     color: inherit;
-}
-.absolute-position{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
 }
 
 /* Header
@@ -43,6 +39,10 @@ body{
             background-color 0.3s ease,
             color 0.3s ease;
     color: #ffffff;
+    z-index: 5;
+}
+.header--absolute{
+    position: absolute;
 }
 .header__inner{
     display: flex;
@@ -67,6 +67,7 @@ body{
 .nav{
     display: flex;
     align-items: center;
+    align-content: center;
     height: 100%;
     font-size: 12px;
     font-weight: bold;
@@ -74,10 +75,13 @@ body{
     color: inherit;
 }
 .nav__link{
+    display: flex;
+    align-items: center;
     color: inherit;
-    padding: calc(80px/2 - 12px/2) 20px 0;
+    padding-right: 20px;
+    padding-left: 20px;
     height: 100%;
-    margin-left: 20px;
+    /*margin-left: 20px;*/
     transition: border-bottom 0.1s ease;
     text-transform: uppercase;
 }
@@ -93,12 +97,13 @@ body{
 
 /* Intro
 -------------------------*/
-.intro{
-    height: 1079px;
+.index{
+    min-height: 100vh;
     width: 100%;
-    background: #000000 url("../images/steadidrill_topbanner 2.png") center no-repeat;
+    background: #000000;
+    position: relative;
 }
-.intro__inner{
+.index__inner{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,21 +111,21 @@ body{
     height: 100%;
 
 }
-.intro__title{
+.index__title{
     font-weight: bold;
     font-size: 96px;
     line-height: 140%;
 }
-.intro__title span{
+.index__title span{
     color: #FFCB05;
 }
-.intro__info{
+.index__info{
     font-weight: normal;
     font-size: 25px;
     line-height: 204.27%;
     margin-top: 40px;
 }
-.intro__info, .intro__title{
+.index__info, .index__title{
     max-width: 1091px;
     color: #ffffff;
     margin-left: 160px;

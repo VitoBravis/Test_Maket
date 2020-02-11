@@ -1,9 +1,9 @@
 
 
 $(".nav__link").mouseover(function () {
-   if ($(window).scrollTop() !== 0) {
-       $(this).css("color", "#000000");
-   }
+    if ($(window).scrollTop() !== 0) {
+        $(this).css("color", "#000000");
+    }
 });
 
 $(".nav__link").mouseout(function () {
