@@ -423,6 +423,7 @@ body{
     }
     .works__title{
         margin-bottom: 0;
+        padding: 2%;
     }
     .works__item:nth-child(2){
         border-left: none;
