@@ -13,5 +13,4 @@ function scrollHeader() {
         header.classList.toggle("header--sticky");
         logo.src = "images/logo1.svg";
     }
-
 }
