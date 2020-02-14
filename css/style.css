@@ -37,13 +37,31 @@ body{
     height: 80px;
     position: fixed;
     transition:
-            background-color 0.3s ease,
-            color 0.3s ease;
+            background-color 0.3s ease-in-out,
+            color 0.3s ease-in-out;
     color: #ffffff;
     z-index: 5;
 }
 .header--absolute{
     position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+}
+.header--sticky{
+    position: fixed;
+    background: #ffffff;
+    color: #5C6266;
+    animation-name: header-anim;
+    animation-duration: 0.4s;
+}
+@keyframes header-anim {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
 .header__inner{
     display: flex;
