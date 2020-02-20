@@ -677,7 +677,7 @@ body{
 /*  News
 -------------------------*/
 .news{
-    height: 90vh;
+    height: 85vh;
 }
 .news__inner{
     margin: 16vh 0 16vh;
@@ -756,8 +756,102 @@ body{
     line-height: 217.89%;
 }
 
+/*  Request
+-------------------------*/
+.request{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.request__inner{
+    width: 83%;
+    height: 76.5%;
+    background: #F7F7F7;
+}
 
 
+/*  Footer
+-------------------------*/
+.footer{
+    background: #1F1F1F;
+    color: #ffffff;
+    width: 100%;
+    height: 81.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer__title{
+    width: 71%;
+    height: 35.5%;
+    margin-left: 16%;
+    margin-top: 3%;
+    display: flex;
+    align-items: flex-end;
+}
+.footer__title h2{
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 140%;
+}
+.footer__title span{
+    color: #FFCB05;
+}
+.footer__contacts{
+    width: 83.5%;
+    height: 43.1%;
+    margin: 0 auto 3%;
+    position: relative;
+}
+.contacts__address{
+    position: absolute;
+    left: 10%;
+    display: flex;
+    width: 59.8%;
+}
+.contacts__address-item{
+    width: 50%;
+}
+.contacts__address-item h3{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 204.27%;
+    margin-bottom: 2rem;
+}
+.contacts__address-item p{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 37px;
+}
+.contacts__nav{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25%;
+    height: 57.8%;
+    border-left: 2px solid #ffffff;
+    padding-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contacts__nav-link{
+    color: #ffffff;
+}
+.contacts__nav-link a{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+.contacts__nav-link a:hover{
+    text-decoration: underline;
+}
+.contacts__rights{
+    /*TODO нижняя часть футера*/
+}
 
 
 
