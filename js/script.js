@@ -1,5 +1,31 @@
 /*JQuery не использовать*/
 
+var swiperNews = new Swiper('.swiper-container--news', {
+    slidesPerView: 3,
+    freeMode: true,
+    spaceBetween: 30,
+    slidesOffsetBefore: 300,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+
+var swiperIndex = new Swiper('.swiper-container--index', {
+    direction: 'vertical',
+    loop: true,
+    effect: 'fade',
+    clickable: true,
+    // autoplay: {
+    //     delay: 4000,
+    //     disableOnInteraction: false,
+    // },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+
 let logo = document.getElementsByClassName("logo")[0];
 let header = document.querySelector("header");
 
