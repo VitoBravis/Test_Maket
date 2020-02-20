@@ -2,24 +2,20 @@
 
 var swiperNews = new Swiper('.swiper-container--news', {
     slidesPerView: 3,
-    freeMode: true,
+    // freeMode: true,
     spaceBetween: 30,
-    slidesOffsetBefore: 300,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
+    slidesOffsetBefore: document.documentElement.clientWidth * 0.156,
 });
 
 var swiperIndex = new Swiper('.swiper-container--index', {
-    direction: 'vertical',
+    direction: 'horizontal',
     loop: true,
     effect: 'fade',
     clickable: true,
-    // autoplay: {
-    //     delay: 4000,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
