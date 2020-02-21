@@ -271,7 +271,17 @@ main.main
         .request__inner
             .request__title
                 h2 Request More Information
-            //TODO form
+            form.form__request(method="POST")
+                input.form__name(type="text" placeholder="Name")
+                input.form__company(type="text" placeholder="Company")
+                select.form__business-segment
+                input.form__email(type="email" placeholder="Email")
+                input.form__phone(type="tel" placeholder="Phone Number")
+                input.form__comment(type="text" placeholder="Комментарий")
+                .checkbox__wrapper
+                    input.form__checkbox(type="checkbox" id="form__checkbox")
+                    label.form__checkbox-label(for="form__checkbox") I give consent for my personal data to be processed
+                button.form__send-btn(type="submit") Send
 footer.footer
     .footer__title
         h2 Effective Advanced
@@ -307,12 +317,14 @@ footer.footer
             .contacts__nav-link
                 a(href="#") Контакты
         .contacts__rights
-            //TODO нижняя часть футера
-
-
-
-
+            .contacts__rights-company
+                h4 &copy; Frontier MWD Systems LLC. 2019
+            .contacts__rights-dev
+                a.contacts__rights-linkedin(href="#" target="_blank")
+                    svg.linkedin-icon(width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(fill-rule="evenodd" clip-rule="evenodd" d="M0 0.253906V18.6172H16V0.253906H0ZM4.9766 15.5096H2.60276V7.31291H4.9766V15.5096ZM3.78968 6.19417H3.774C2.97769 6.19417 2.46154 5.56453 2.46154 4.77753C2.46154 3.97326 2.99277 3.36146 3.80522 3.36146C4.61785 3.36146 5.11722 3.97326 5.13276 4.77753C5.13276 5.56453 4.61785 6.19417 3.78968 6.19417ZM13.5385 15.5096H11.164V11.1244C11.164 10.0229 10.8209 9.27108 9.96153 9.27108C9.30521 9.27108 8.9152 9.77731 8.74339 10.2677C8.68093 10.4428 8.66462 10.6863 8.66462 10.9319V15.5097H6.28969C6.28969 15.5097 6.32151 8.08191 6.28969 7.31295H8.66462V8.47444C8.98015 7.91721 9.54325 7.12052 10.8046 7.12052C12.3672 7.12052 13.5385 8.29174 13.5385 10.8092V15.5096Z" fill="white")
+                    h4 LinkedIn
+                .contacts__rights-only
+                    h4 Design by Only.
 script(src="js/swiper.min.js")
 script(src='js/script.js')
-
-

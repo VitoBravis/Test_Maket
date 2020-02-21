@@ -13,6 +13,11 @@ div, nav, header, a, img, body, h1, h2, h3, h4 ,h5 ,h6, p{
     outline: 0;
     background: transparent;
 }
+form input, form select{
+    border: none;
+    background: transparent;
+    outline: none;
+}
 a {
     text-decoration: none;
     color: #ffffff;
@@ -260,9 +265,14 @@ body{
     stroke-width: 1px;
 
 }
-.swiper-slide-active .circle-1{
+.circle-1{
     left: 0.5%;
     stroke-opacity: 0.3;
+}
+.circle-4{
+    stroke-opacity: 0.5;
+}
+.swiper-slide-active .circle-1{
     animation-name: fade-circle;
     animation-duration: 3s;
 }
@@ -276,7 +286,6 @@ body{
 
 }
 .swiper-slide-active .circle-4{
-    /*stroke-opacity: 0.5;*/
     animation-name: fade-circle-2;
     animation-duration: 3s;
 }
@@ -741,7 +750,8 @@ body{
 }
 .swiper-slide-prev .news-slide__title,
 .swiper-slide-active .news-slide__title,
-.swiper-slide-next .news-slide__title{
+.swiper-slide-next .news-slide__title
+/*.swiper__slide--news:last-child .news-slide__title*/{
     opacity: 1;
 }
 .news-slide__text{
@@ -769,6 +779,100 @@ body{
     width: 83%;
     height: 76.5%;
     background: #F7F7F7;
+    padding: 4.2% 8.4%;
+}
+.request__title{
+    margin-bottom: 50px;
+}
+.request__title h2{
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 140%;
+}
+.form__request{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: calc(100% - 100px);
+}
+.form__name, .form__comment{
+    width: 100%;
+}
+.form__company,
+.form__business-segment,
+.form__email,
+.form__phone{
+    width: 45%;
+}
+.form__request input,
+.form__request select{
+    border-bottom: 2px solid #949494;
+    margin-bottom: 3%;
+    transition: border 0.2s;
+    font-size: 18px;
+    line-height: 217.89%;
+}
+.form__request input:focus{
+    border-bottom: 2px solid #000000;
+}
+.checkbox__wrapper{
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+.form__checkbox{
+    align-self: center;
+    margin-bottom: 0!important;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+.form__checkbox-label{
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 31px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.form__send-btn{
+    width: 200px;
+    height: 60px;
+    border: 2px solid #000000;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    position: relative;
+    align-self: center;
+    cursor: pointer;
+    background: transparent;
+    z-index: 10;
+    transition: background-color 0.2s,
+                transform 0.2s;
+}
+.form__send-btn::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 50%;
+    background: #FFCB05;
+    z-index: -1;
+    transition: border-radius 0.3s ease-in-out,
+                opacity 0.3s ease-in-out;
+}
+.form__send-btn:hover::before{
+    border-radius: 0;
+    opacity: 1;
+}
+.form__send-btn:active {
+    transform: scale(0.95);
 }
 
 
@@ -850,9 +954,46 @@ body{
     text-decoration: underline;
 }
 .contacts__rights{
-    /*TODO нижняя часть футера*/
+    /*height: 9%;*/
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
 }
-
+.contacts__rights-company h4{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 34px;
+    text-transform: capitalize;
+}
+.contacts__rights-dev{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+.contacts__rights-linkedin{
+    display: flex;
+}
+.contacts__rights-linkedin:hover .linkedin-icon{
+    opacity: 1;
+    transition: opacity 0.1s ease-in-out;
+}
+.linkedin-icon{
+    opacity: 0.4;
+    transition: opacity 0.1s ease-in-out;
+}
+.contacts__rights-linkedin h4{
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 160%;
+    margin-left: 1.5rem;
+}
+.contacts__rights-only h4{
+    font-size: 14px;
+    line-height: 32px;
+}
 
 
 /*  Media
