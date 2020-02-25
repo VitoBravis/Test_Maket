@@ -316,18 +316,35 @@
       <div class="request__title">
         <h2>Request More Information</h2>
       </div>
-      <form class="form__request" method="POST">
-        <input class="form__name" type="text" placeholder="Name">
-        <input class="form__company" type="text" placeholder="Company">
-        <select class="form__business-segment"></select>
-        <input class="form__email" type="email" placeholder="Email">
-        <input class="form__phone" type="tel" placeholder="Phone Number">
-        <input class="form__comment" type="text" placeholder="Комментарий">
+      <form class="form__request" name="request" novalidate method="POST">
+        <div class="input__wrapper">
+          <input class="form__input form__name" name="name" type="text" placeholder="Name">
+          <div class="input__wrapper--error"></div>
+        </div>
+        <div class="input__wrapper">
+          <input class="form__input form__company" name="company" type="text" placeholder="Company">
+          <div class="input__wrapper--error"></div>
+        </div>
+        <div class="input__wrapper">
+          <select class="form__input form__business-segment"></select>
+          <div class="input__wrapper--error"></div>
+        </div>
+        <div class="input__wrapper">
+          <input class="form__input form__email" name="email" type="email" placeholder="Email">
+          <div class="input__wrapper--error"></div>
+        </div>
+        <div class="input__wrapper">
+          <input class="form__input form__phone" name="phone" type="tel" placeholder="Phone Number">
+          <div class="input__wrapper--error"></div>
+        </div>
+        <div class="input__wrapper">
+          <textarea class="form__textarea form__comment" name="comment" placeholder="Комментарий"></textarea>
+        </div>
         <div class="checkbox__wrapper">
           <input class="form__checkbox" type="checkbox" id="form__checkbox">
           <label class="form__checkbox-label" for="form__checkbox">I give consent for my personal data to be processed</label>
         </div>
-        <button class="form__send-btn" type="submit">Send</button>
+        <button class="form__send-btn" name="sendButton" type="submit">Send</button>
       </form>
     </div>
   </div>

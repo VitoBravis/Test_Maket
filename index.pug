@@ -271,17 +271,28 @@ main.main
         .request__inner
             .request__title
                 h2 Request More Information
-            form.form__request(method="POST")
-                input.form__name(type="text" placeholder="Name")
-                input.form__company(type="text" placeholder="Company")
-                select.form__business-segment
-                input.form__email(type="email" placeholder="Email")
-                input.form__phone(type="tel" placeholder="Phone Number")
-                input.form__comment(type="text" placeholder="Комментарий")
+            form.form__request(name="request" novalidate method="POST")
+                .input__wrapper
+                    input.form__input.form__name(name="name" type="text" placeholder="Name")
+                    .input__wrapper--error
+                .input__wrapper
+                    input.form__input.form__company(name="company" type="text" placeholder="Company")
+                    .input__wrapper--error
+                .input__wrapper
+                    select.form__input.form__business-segment
+                    .input__wrapper--error
+                .input__wrapper
+                    input.form__input.form__email(name="email" type="email" placeholder="Email")
+                    .input__wrapper--error
+                .input__wrapper
+                    input.form__input.form__phone(name="phone" type="tel" placeholder="Phone Number")
+                    .input__wrapper--error
+                .input__wrapper
+                    textarea.form__textarea.form__comment(name="comment" placeholder="Комментарий")
                 .checkbox__wrapper
                     input.form__checkbox(type="checkbox" id="form__checkbox")
                     label.form__checkbox-label(for="form__checkbox") I give consent for my personal data to be processed
-                button.form__send-btn(type="submit") Send
+                button.form__send-btn(name="sendButton" type="submit") Send
 footer.footer
     .footer__title
         h2 Effective Advanced
