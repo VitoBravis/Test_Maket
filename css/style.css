@@ -806,16 +806,16 @@ body {
   transform: translateY(-50%);
   width: 29%;
   height: 26.3%;
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  transition: opacity 0.8s ease-in-out 0.2s, transform 0.8s ease-in-out 0.2s;
 }
 
 .map__item--1_fade {
-  transform: translate(-200%, -50%);
+  transform: translate(0, 300%);
   opacity: 0;
 }
 
 .map__item--2_fade {
-  transform: translate(200%, -50%);
+  transform: translate(0, -300%);
   opacity: 0;
 }
 
@@ -846,6 +846,7 @@ body {
 
 .swiper__wrapper--news {
   height: 100%;
+  margin-left: -18vw;
 }
 
 .news-link {

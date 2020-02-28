@@ -20,10 +20,10 @@ const swiperIndex = new Swiper('.swiper-container--index', {
 /*=== Swiper News===*/
 
 const swiperNews = new Swiper('.swiper-container--news', {
+    centeredSlides: true,
     slidesPerView: 3,
-    // freeMode: true,
     spaceBetween: 30,
-    slidesOffsetBefore: document.documentElement.clientWidth * 0.156,
+    // slidesOffsetBefore: -(document.documentElement.clientWidth * 0.156),
 });
 
 /*=== Scroll Events ===*/
@@ -50,10 +50,10 @@ function scrollEvent() {
     }
     scrollAnimation(aboutInner, "_slide-right");
     scrollAnimation(works, "_slide-left");
-    scrollAnimation(mapItems, "_fade-in");
     scrollAnimation(newsInner, "_slide-left");
     scrollAnimation(infoItem1, "_slide-right");
     scrollAnimation(infoItem2, "_slide-left");
+    // scrollAnimation(mapItems, "_fade-in");
 
     function scrollAnimation(itemList, anim) {
         for(let i=0; i<itemList.length; i++) {
