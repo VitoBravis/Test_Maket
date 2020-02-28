@@ -1,4 +1,4 @@
-/*JQuery не использовать*/
+
 
 /*=== Swiper Index/Intro ===*/
 
@@ -64,12 +64,17 @@ function scrollEvent() {
     }
 }
 
+
 /*=== Form Validity ===*/
 
 let formName = document.querySelector(".form__name");
 let formCompany = document.querySelector(".form__company");
 let formEmail = document.querySelector(".form__email");
 let formPhone = document.querySelector(".form__phone");
+let formComment = document.querySelector(".form__comment");
+let formSelect = document.querySelector(".form__business-segment");
+let formCheckBox = document.querySelector(".form__checkbox");
+let form = document.querySelector(".form__request");
 
 formName.addEventListener("input", inputCheck);
 formCompany.addEventListener("input", inputCheck);
@@ -79,10 +84,19 @@ formName.addEventListener("focusout", focusOutCheck);
 formCompany.addEventListener("focusout", focusOutCheck);
 formEmail.addEventListener("focusout", focusOutCheckEmail);
 formPhone.addEventListener("focusout", focusOutCheckPhone);
+formComment.addEventListener("focusout", focusOutCheckComment);
+formSelect.addEventListener("focusout", focusOutCheckSelect)
+formCheckBox.addEventListener("change", checkboxChange);
+
+
+form.addEventListener("submit", formSubmit);
+
+
 
 // let phoneReg = /^(\+[1-9][0-9]*(\([0-9]*\)|-[0-9]*-))?[0]?[1-9][0-9\- ]*$/;
 let phoneReg = /^[\+]?[(]?[0-9]{3}[)]?[\-\s\.]?[0-9]{3}[\-\s\.]?[0-9]{4,6}$/;
 let emailReg = /^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/;
+
 
 function errorMessage(errEl, errText = "") {
     let input = errEl.parentElement.firstChild;
@@ -135,7 +149,43 @@ function focusOutCheckPhone() {
     }
 }
 
-//TODO Submit check
+function focusOutCheckSelect() {
+    if (this.value === "false"){
+        errorMessage(this.parentElement.lastChild, "Это поле обязательно для заполнения");
+    } else {
+        errorMessage(this.parentElement.lastChild);
+    }
+}
+
+function focusOutCheckComment() {
+    if(!this.value.trim()) {
+        this.classList.remove("form__input--valid");
+    } else {
+        this.classList.add("form__input--valid");
+    }
+}
+function checkboxChange() {
+    errorMessage(this.parentElement.lastChild);
+}
+
+function checkboxCheck() {
+    if (!this.checked){
+        errorMessage(this.parentElement.lastChild, "Необходимо подтверждение");
+    }
+}
+
+function formSubmit(event) {
+    focusOutCheck.apply(formName);
+    focusOutCheck.apply(formCompany);
+    focusOutCheckEmail.apply(formEmail);
+    focusOutCheckPhone.apply(formPhone);
+    focusOutCheckSelect.apply(formSelect);
+    checkboxCheck.apply(formCheckBox);
+    let errors = document.querySelectorAll(".form__input--error");
+    if (errors) {
+        event.preventDefault();
+    }
+}
 
 
 

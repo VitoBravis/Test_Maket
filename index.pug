@@ -6,6 +6,11 @@ head
     link(rel='stylesheet' type='text/css' href='css/style.css')
     link(rel="stylesheet" href="css/swiper.min.css")
     title Андрей Селедцов
+    meta(http-equiv='Content-Type' content='text/html; charset=utf-8')
+    script(src='https://api-maps.yandex.ru/2.1/?apikey=765bf870-2117-4a51-ab78-e7d74ab84444&lang=ru_RU' type='text/javascript')
+    script(src="js/maps.js" type='text/javascript')
+
+
 // Header
 header.header.header--absolute
     .header__inner
@@ -188,6 +193,8 @@ main.main
     .map
         .map__bg
             img.map__picture(src="images/map_Light.png" alt="")
+        .map__container
+            #map
         .map__nav
             .map__nav-link.map__nav-link--active World
             .map__nav-link Russia
@@ -271,7 +278,7 @@ main.main
         .request__inner
             .request__title
                 h2 Request More Information
-            form.form__request(name="request" novalidate method="POST")
+            form.form__request(name="request" method="POST" novalidate )
                 .input__wrapper
                     input.form__input.form__name(name="name" type="text" placeholder="Name")
                     .input__wrapper--error
@@ -280,6 +287,11 @@ main.main
                     .input__wrapper--error
                 .input__wrapper
                     select.form__input.form__business-segment
+                        option.form__option(disabled selected value="false") Business segment
+                        option.form__option(value="Segment A") Segment A
+                        option.form__option(value="Segment B") Segment B
+                        option.form__option(value="Segment C") Segment C
+                        option.form__option(value="Segment D") Segment D
                     .input__wrapper--error
                 .input__wrapper
                     input.form__input.form__email(name="email" type="email" placeholder="Email")
@@ -292,6 +304,7 @@ main.main
                 .checkbox__wrapper
                     input.form__checkbox(type="checkbox" id="form__checkbox")
                     label.form__checkbox-label(for="form__checkbox") I give consent for my personal data to be processed
+                    .input__wrapper--error
                 button.form__send-btn(name="sendButton" type="submit") Send
 footer.footer
     .footer__title
@@ -337,5 +350,6 @@ footer.footer
                     h4 LinkedIn
                 .contacts__rights-only
                     h4 Design by Only.
+
 script(src="js/swiper.min.js")
 script(src='js/script.js')
