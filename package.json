@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/VitoBravis/Test_Maket#readme",
   "dependencies": {
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "swiper": "^5.3.1",
     "ymaps": "^0.2.1"
   },
